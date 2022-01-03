@@ -5,6 +5,7 @@ import GoogleButton from "../components/GoogleButton";
 import FormInput from "../components/FormInput";
 import FormPasswordInput from "../components/FormPasswordInput";
 import AuthFormStructure from "../components/AuthFormStructure";
+import { Link } from "react-router-dom";
 
 function SignInScreen() {
   const [viewPassword, setViewPassword] = useState(false);
@@ -14,12 +15,9 @@ function SignInScreen() {
   };
 
   return (
-    <AuthFormStructure>
+    <AuthFormStructure className="sign-in">
       <div className="form-header">
         <h1>Sign in</h1>
-        <p>
-          Don't have an account? <a>Sign up</a>
-        </p>
       </div>
       <GoogleButton text="Sign up with Google" />
       <div className="separator">
@@ -36,6 +34,11 @@ function SignInScreen() {
           divClassName="password-input"
         />
         <button>Sign in with email</button>
+      </div>
+      <div className="form-footer">
+        <p>
+          Don't have an account? <Link to="/sign-up">Sign up</Link>
+        </p>
       </div>
     </AuthFormStructure>
   );

@@ -5,13 +5,14 @@ import {
   Navigate,
   Link
 } from 'react-router-dom';
-import AuthScren from '../screens/SignInScreen';
+import SignInScreen from '../screens/SignInScreen';
+import SignUpScreen from '../screens/SignUpScreen';
 
 export const Navigation = () => {
   return (
     <BrowserRouter>
       <>
-        <nav>
+        {/* <nav>
           <ul>
             <li>
               <Link to="/">Home</Link>
@@ -23,9 +24,10 @@ export const Navigation = () => {
               <Link to="/users">Users</Link>
             </li>
           </ul>
-        </nav>
+        </nav> */}
         <Routes>
-          <Route path="/" element={ <AuthScren /> } />
+          <Route path="/sign-in" element={ <SignInScreen /> } />
+          <Route path="/sign-up" element={ <SignUpScreen /> } />
           <Route path="/*" element={ <Navigate to="/" replace /> } />
         </Routes>
       </>

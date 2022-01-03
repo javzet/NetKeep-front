@@ -1,9 +1,8 @@
-import SignUpScreen from "./screens/SignUpScreen";
+import { Navigation } from './routes/Navigation';
 
 function NetkeppApp() {
   return (
-    // <Navigation />
-    <SignUpScreen />
+    <Navigation />
   );
 }
 

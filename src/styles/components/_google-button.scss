@@ -1,0 +1,56 @@
+.google-button {
+  grid-area: google-btn;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+
+  button {
+    padding: var(--buttons-padding);
+    width: $items-width;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: $items-border-radius;
+    background-color: $natural-white-color;
+    position: relative;
+    z-index: 10;
+
+    span {
+      font-size: var(--button-font-size);
+      margin-left: 0.3rem;
+      color: $semi-black-color;
+      font-weight: bold;
+      z-index: 10;
+    }
+
+    img {
+      display: block;
+      width: 1.2rem;
+      z-index: 10;
+    }
+
+    &::after {
+      content: "";
+      z-index: 9;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: $items-border-radius;
+      box-shadow: 1px 1px 0.8rem 0px rgba($natural-black-color, 0.3);
+      opacity: 0;
+    }
+
+    &:hover::after {
+      opacity: 1;
+    }
+
+    &:hover {
+      background-color: darken($color: $natural-white-color, $amount: 4%);
+    }
+  }
+}

@@ -1,0 +1,32 @@
+:root {
+  font-size: 14px;
+
+  // Auth form variables (css variables)
+  --input-font-size: 0.8rem;
+  --button-font-size: 0.8rem;
+  --header-font-size: 3rem;
+  --header-p-font-size: 0.9rem;
+
+  --buttons-padding: 0.8rem 2rem;
+  --inputs-padding: 0.8rem 2rem;
+
+  @media (min-width: 481px) {
+    font-size: 15px;
+  }
+  @media (min-width: 769px) {
+    font-size: 16px;
+  }
+  @media (max-width: 360px) {
+    // Auth form
+    --button-font-size: 0.7rem;
+    --header-font-size: 2rem;
+    --header-p-font-size: 0.8rem;
+
+    --buttons-padding: 0.6rem 2rem;
+    --inputs-padding: 0.6rem 2rem;
+  }
+}
+
+// Auth form variables (sass variables)
+$items-width: 96%;
+$items-border-radius: 999rem;

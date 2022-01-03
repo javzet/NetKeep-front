@@ -7,8 +7,16 @@ function AuthFormStructure({
 }) {
   return (
     <div className="auth-screen">
-      <div className="auth-form__container">
-        <form className={className ? `auth-form ${className}` : "auth-form"}>{children}</form>
+      <div
+        className={
+          className
+            ? `auth-form__container ${className}`
+            : "auth-form__container"
+        }
+      >
+        <form className="auth-form">
+          {children}
+        </form>
       </div>
     </div>
   );
